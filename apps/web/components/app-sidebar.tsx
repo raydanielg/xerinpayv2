@@ -174,24 +174,29 @@ const data = {
 }
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader>
-        <div className="flex items-center justify-center px-3 py-4">
-          <img
-            src="/logo.svg"
-            alt="XerinPay"
-            className="size-12"
-          />
-        </div>
-      </SidebarHeader>
-      <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
-      </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
+    <Sidebar collapsible="icon" {...props}>
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{
+          backgroundImage: "url(/images/ecommerce-phone-happy-black-woman-with-credit-card-online-shopping-digital-payment-app-home-smile-banking-excited-african-girl-checks-cash-budget-money-growth-savings-online_590464-111903.jpg)",
+        }}
+      />
+      <div className="relative flex flex-col h-full">
+        <SidebarHeader>
+          <div className="flex items-center justify-center px-3 py-4 group-data-[collapsible=icon]:justify-center">
+            <span className="text-lg font-bold tracking-tight group-data-[collapsible=icon]:hidden">XerinPay</span>
+            <span className="hidden text-sm font-bold tracking-tight group-data-[collapsible=icon]:inline">XP</span>
+          </div>
+        </SidebarHeader>
+        <SidebarContent>
+          <NavMain items={data.navMain} />
+          <NavDocuments items={data.documents} />
+          <NavSecondary items={data.navSecondary} className="mt-auto" />
+        </SidebarContent>
+        <SidebarFooter>
+          <NavUser user={data.user} />
+        </SidebarFooter>
+      </div>
     </Sidebar>
   )
 }

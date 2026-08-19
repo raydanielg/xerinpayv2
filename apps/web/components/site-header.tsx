@@ -10,6 +10,7 @@ import { Input } from "@workspace/ui/components/input"
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
@@ -30,7 +31,10 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-1 h-4 data-vertical:self-auto"
         />
-        <h1 className="text-base font-medium">Dashboard</h1>
+        <h1 className="text-base font-medium">
+          <span className="text-muted-foreground">Welcome back</span>{" "}
+          <span className="font-semibold">👋 shadcn</span>
+        </h1>
 
         <div className="ml-auto flex items-center gap-2">
           <div className="relative hidden md:block">
@@ -70,9 +74,11 @@ export function SiteHeader() {
               }
             />
             <DropdownMenuContent align="end" className="w-72">
-              <DropdownMenuLabel className="text-sm font-medium">
-                Notifications
-              </DropdownMenuLabel>
+              <DropdownMenuGroup>
+                <DropdownMenuLabel className="text-sm font-medium">
+                  Notifications
+                </DropdownMenuLabel>
+              </DropdownMenuGroup>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="flex flex-col items-start gap-1 py-2">
                 <div className="flex w-full items-center justify-between">

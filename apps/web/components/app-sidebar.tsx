@@ -184,9 +184,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <div className="relative flex flex-col h-full">
         <SidebarHeader>
           <div className="flex items-center justify-center px-3 py-4 group-data-[collapsible=icon]:justify-center">
-            <span className="text-lg font-bold tracking-tight group-data-[collapsible=icon]:hidden">XerinPay</span>
-            <span className="hidden text-sm font-bold tracking-tight group-data-[collapsible=icon]:inline">XP</span>
-          </div>
+          <span className="text-xl font-bold italic tracking-tight group-data-[collapsible=icon]:hidden">
+            <span className="text-orange-500">Xerin</span><span>Pay</span>
+          </span>
+          <span className="hidden text-sm font-bold italic tracking-tight group-data-[collapsible=icon]:inline">
+            <span className="text-orange-500">X</span><span>P</span>
+          </span>
+        </div>
         </SidebarHeader>
         <SidebarContent>
           <NavMain items={data.navMain} />

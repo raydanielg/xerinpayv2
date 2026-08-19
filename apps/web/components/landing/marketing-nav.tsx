@@ -122,18 +122,16 @@ export function MarketingNav() {
         <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
           <ThemeToggle />
           <Button
-            asChild
+            render={<Link href="/auth/login" />}
             variant="ghost"
             size="sm"
             className="hidden sm:inline-flex"
           >
-            <Link href="/auth/login">Sign in</Link>
+            Sign in
           </Button>
-          <Button asChild size="sm" className="group">
-            <Link href="/auth/register">
-              Get API keys
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+          <Button render={<Link href="/auth/register" />} size="sm" className="group">
+            Get API keys
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </Button>
           <Button
             variant="ghost"
@@ -169,8 +167,8 @@ export function MarketingNav() {
             </li>
           ))}
           <li className="mt-2 grid gap-2 border-t border-border pt-4 sm:hidden">
-            <Button asChild variant="outline" className="w-full">
-              <Link href="/auth/login">Sign in</Link>
+            <Button render={<Link href="/auth/login" />} variant="outline" className="w-full">
+              Sign in
             </Button>
           </li>
         </ul>

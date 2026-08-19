@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { MarketingFooter } from "@/components/landing/marketing-footer";
 import { MarketingNav } from "@/components/landing/marketing-nav";
 
-import "./marketing.css";
-
 export const metadata: Metadata = {
   title: "XerinPay — Payment infrastructure for Africa",
   description:

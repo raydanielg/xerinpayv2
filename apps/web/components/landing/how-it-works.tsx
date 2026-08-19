@@ -71,7 +71,7 @@ export function HowItWorks() {
             <Reveal key={item.step} delay={i * 110} className="relative">
               <li className="list-none">
                 <span className="relative z-10 inline-flex size-14 items-center justify-center rounded-2xl border border-border bg-background shadow-sm">
-                  <item.icon className="size-6 text-emerald-500" />
+                  <item.icon className="size-6 text-orange-500" />
                 </span>
                 <p className="mt-5 font-mono text-xs font-semibold tracking-widest text-muted-foreground">
                   STEP {item.step}

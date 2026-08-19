@@ -141,3 +141,77 @@
     transform: translateY(0);
   }
 }
+
+/* Marketing animations */
+@keyframes xp-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes xp-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes xp-pulse-ring {
+  0% { transform: scale(0.85); opacity: 0.7; }
+  70% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes xp-shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+@keyframes xp-feed {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@keyframes xp-scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  40%, 60% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes xp-dash {
+  to { stroke-dashoffset: -1000; }
+}
+
+.xp-marquee-track { animation: xp-marquee 38s linear infinite; }
+.xp-float { animation: xp-float 7s ease-in-out infinite; }
+.xp-float-slow { animation: xp-float 11s ease-in-out infinite; }
+.xp-pulse-ring { animation: xp-pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.xp-feed-track { animation: xp-feed 22s linear infinite; }
+.xp-scan { animation: xp-scan 3.6s ease-in-out infinite; }
+.xp-dash { stroke-dasharray: 6 10; animation: xp-dash 14s linear infinite; }
+.xp-shimmer-text { background-size: 200% auto; animation: xp-shimmer 6s linear infinite; }
+
+.xp-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, currentColor 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, currentColor 8%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.xp-dots {
+  background-image: radial-gradient(
+    color-mix(in oklab, currentColor 14%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xp-marquee-track,
+  .xp-float,
+  .xp-float-slow,
+  .xp-pulse-ring,
+  .xp-feed-track,
+  .xp-scan,
+  .xp-dash,
+  .xp-shimmer-text {
+    animation: none !important;
+  }
+}

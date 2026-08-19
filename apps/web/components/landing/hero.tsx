@@ -15,12 +15,12 @@ import { Button } from "@workspace/ui/components/button";
 import { Reveal } from "@/components/landing/reveal";
 
 const FEED = [
-  { id: "ch_8f21", method: "M-Pesa", amount: "KES 4,500", state: "Settled" },
+  { id: "ch_8f21", method: "M-Pesa", amount: "TZS 4,500", state: "Settled" },
   { id: "ch_9b04", method: "Visa", amount: "USD 129.00", state: "Captured" },
-  { id: "ch_2d77", method: "Airtel", amount: "KES 1,200", state: "Settled" },
+  { id: "ch_2d77", method: "Airtel", amount: "TZS 1,200", state: "Settled" },
   { id: "ch_5a19", method: "Mastercard", amount: "EUR 89.90", state: "3-DS ok" },
-  { id: "ch_7c53", method: "Bank", amount: "KES 250,000", state: "Settled" },
-  { id: "ch_1e46", method: "M-Pesa", amount: "KES 780", state: "Captured" },
+  { id: "ch_7c53", method: "Bank", amount: "TZS 250,000", state: "Settled" },
+  { id: "ch_1e46", method: "M-Pesa", amount: "TZS 780", state: "Captured" },
 ];
 
 export function Hero() {
@@ -29,9 +29,9 @@ export function Hero() {
       {/* Ambient background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="xp-grid absolute inset-0 text-foreground opacity-[0.45] [mask-image:radial-gradient(ellipse_75%_55%_at_50%_0%,black,transparent)]" />
-        <div className="absolute left-1/2 top-[-16rem] size-[42rem] -translate-x-1/2 rounded-full bg-emerald-500/20 blur-[120px] dark:bg-emerald-500/15" />
-        <div className="absolute right-[-10rem] top-24 size-[30rem] rounded-full bg-sky-500/15 blur-[110px] dark:bg-sky-500/10" />
-        <div className="absolute bottom-[-12rem] left-[-8rem] size-[26rem] rounded-full bg-violet-500/10 blur-[110px]" />
+        <div className="absolute left-1/2 top-[-16rem] size-[42rem] -translate-x-1/2 rounded-full bg-orange-500/20 blur-[120px] dark:bg-orange-500/15" />
+        <div className="absolute right-[-10rem] top-24 size-[30rem] rounded-full bg-amber-500/15 blur-[110px] dark:bg-amber-500/10" />
+        <div className="absolute bottom-[-12rem] left-[-8rem] size-[26rem] rounded-full bg-orange-400/10 blur-[110px]" />
       </div>
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:px-8">
@@ -40,11 +40,11 @@ export function Hero() {
           <Reveal>
             <Badge
               variant="secondary"
-              className="gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-emerald-700 dark:text-emerald-300"
+              className="gap-2 rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-orange-700 dark:text-orange-300"
             >
               <span className="relative flex size-1.5">
-                <span className="xp-pulse-ring absolute inline-flex size-full rounded-full bg-emerald-500" />
-                <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
+                <span className="xp-pulse-ring absolute inline-flex size-full rounded-full bg-orange-500" />
+                <span className="relative inline-flex size-1.5 rounded-full bg-orange-500" />
               </span>
               PCI DSS Level 1 · Live in 14 markets
             </Badge>
@@ -53,7 +53,7 @@ export function Hero() {
           <Reveal delay={80}>
             <h1 className="mt-6 text-pretty text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.15rem]">
               Payment infrastructure{" "}
-              <span className="xp-shimmer-text bg-gradient-to-r from-emerald-500 via-teal-400 to-sky-500 bg-clip-text text-transparent">
+              <span className="xp-shimmer-text bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">
                 built for Africa&apos;s
               </span>{" "}
               internet economy.
@@ -70,22 +70,18 @@ export function Hero() {
 
           <Reveal delay={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button asChild size="lg" className="group h-12 px-6 text-base">
-                <Link href="/auth/register">
-                  Start integrating free
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <Button render={<Link href="/auth/register" />} size="lg" className="group h-12 px-6 text-base">
+                Start integrating free
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button
-                asChild
+                render={<a href="#developers" />}
                 size="lg"
                 variant="outline"
                 className="h-12 px-6 text-base"
               >
-                <a href="#developers">
-                  <Terminal className="size-4" />
-                  View the docs
-                </a>
+                <Terminal className="size-4" />
+                View the docs
               </Button>
             </div>
           </Reveal>
@@ -98,7 +94,7 @@ export function Hero() {
                 { icon: BadgeCheck, label: "Same-day settlement" },
               ].map((item) => (
                 <li key={item.label} className="flex items-center gap-2">
-                  <item.icon className="size-4 shrink-0 text-emerald-500" />
+                  <item.icon className="size-4 shrink-0 text-orange-500" />
                   {item.label}
                 </li>
               ))}
@@ -112,7 +108,7 @@ export function Hero() {
             {/* glow */}
             <div
               aria-hidden
-              className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-emerald-500/20 via-transparent to-sky-500/20 blur-2xl"
+              className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-orange-500/20 via-transparent to-amber-500/20 blur-2xl"
             />
 
             {/* Console card */}
@@ -121,12 +117,12 @@ export function Hero() {
                 <div className="flex gap-1.5">
                   <span className="size-2.5 rounded-full bg-red-400/80" />
                   <span className="size-2.5 rounded-full bg-amber-400/80" />
-                  <span className="size-2.5 rounded-full bg-emerald-400/80" />
+                  <span className="size-2.5 rounded-full bg-orange-400/80" />
                 </div>
                 <p className="ml-2 text-xs font-medium text-muted-foreground">
                   dashboard.xerinpay.com
                 </p>
-                <span className="ml-auto flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+                <span className="ml-auto flex items-center gap-1.5 rounded-full bg-orange-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange-600 dark:text-orange-400">
                   <Lock className="size-3" />
                   TLS 1.3
                 </span>
@@ -139,10 +135,10 @@ export function Hero() {
                       Volume today
                     </p>
                     <p className="mt-1 text-3xl font-semibold tracking-tight tabular-nums">
-                      KES 8,412,930
+                      TZS 8,412,930
                     </p>
                   </div>
-                  <span className="rounded-full bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                  <span className="rounded-full bg-orange-500/10 px-2.5 py-1 text-xs font-semibold text-orange-600 dark:text-orange-400">
                     +18.4%
                   </span>
                 </div>
@@ -156,8 +152,8 @@ export function Hero() {
                 >
                   <defs>
                     <linearGradient id="xp-spark" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="rgb(16 185 129)" stopOpacity="0.35" />
-                      <stop offset="100%" stopColor="rgb(16 185 129)" stopOpacity="0" />
+                      <stop offset="0%" stopColor="rgb(249 115 22)" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="rgb(249 115 22)" stopOpacity="0" />
                     </linearGradient>
                   </defs>
                   <path
@@ -167,7 +163,7 @@ export function Hero() {
                   <path
                     d="M0 58 L32 50 L64 54 L96 38 L128 44 L160 26 L192 32 L224 18 L256 24 L288 10 L320 14"
                     fill="none"
-                    stroke="rgb(16 185 129)"
+                    stroke="rgb(249 115 22)"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -179,7 +175,7 @@ export function Hero() {
                   <div className="flex items-center justify-between border-b border-border/70 px-3 py-2">
                     <p className="text-xs font-semibold">Live transactions</p>
                     <span className="flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
-                      <span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />
+                      <span className="size-1.5 animate-pulse rounded-full bg-orange-500" />
                       streaming
                     </span>
                   </div>
@@ -199,7 +195,7 @@ export function Hero() {
                           <span className="font-medium tabular-nums">
                             {row.amount}
                           </span>
-                          <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 font-medium text-emerald-600 dark:text-emerald-400">
+                          <span className="rounded-full bg-orange-500/10 px-2 py-0.5 font-medium text-orange-600 dark:text-orange-400">
                             {row.state}
                           </span>
                         </div>
@@ -213,7 +209,7 @@ export function Hero() {
             {/* floating chips */}
             <div className="xp-float absolute -left-4 top-24 hidden rounded-xl border border-border/70 bg-card/90 px-3 py-2 shadow-lg backdrop-blur-md sm:block">
               <p className="flex items-center gap-2 text-xs font-medium">
-                <ShieldCheck className="size-3.5 text-emerald-500" />
+                <ShieldCheck className="size-3.5 text-orange-500" />
                 Fraud score 0.02
               </p>
             </div>
@@ -222,7 +218,7 @@ export function Hero() {
               style={{ animationDelay: "1.4s" }}
             >
               <p className="flex items-center gap-2 text-xs font-medium">
-                <Sparkles className="size-3.5 text-sky-500" />
+                <Sparkles className="size-3.5 text-amber-500" />
                 142ms auth latency
               </p>
             </div>

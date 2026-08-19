@@ -83,7 +83,7 @@ export function Security() {
       className="relative scroll-mt-24 overflow-hidden py-20 sm:py-28"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 size-[46rem] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[130px]" />
+        <div className="absolute left-1/2 top-0 size-[46rem] -translate-x-1/2 rounded-full bg-orange-500/10 blur-[130px]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -103,7 +103,7 @@ export function Security() {
               { value: "24/7", label: "Security operations centre" },
             ].map((stat) => (
               <div key={stat.label} className="bg-card px-6 py-7 text-center">
-                <p className="text-3xl font-semibold tracking-tight text-emerald-500 tabular-nums">
+                <p className="text-3xl font-semibold tracking-tight text-orange-500 tabular-nums">
                   {stat.value}
                 </p>
                 <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
@@ -118,13 +118,13 @@ export function Security() {
         <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {PILLARS.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 70}>
-              <Card className="group relative h-full overflow-hidden border-border/60 bg-card/70 p-6 transition-colors hover:border-emerald-500/40">
+              <Card className="group relative h-full overflow-hidden border-border/60 bg-card/70 p-6 transition-colors hover:border-orange-500/40">
                 <div
                   aria-hidden
-                  className="xp-scan pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100"
+                  className="xp-scan pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100"
                 />
                 <div className="relative">
-                  <span className="inline-flex size-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/20 dark:text-emerald-400">
+                  <span className="inline-flex size-11 items-center justify-center rounded-xl bg-orange-500/10 text-orange-600 ring-1 ring-orange-500/20 dark:text-orange-400">
                     <pillar.icon className="size-5" />
                   </span>
                   <h3 className="mt-5 text-base font-semibold tracking-tight">
@@ -153,7 +153,7 @@ export function Security() {
           <Reveal>
             <Card className="h-full border-border/60 bg-card/70 p-6 sm:p-8">
               <div className="flex items-center gap-3">
-                <Activity className="size-5 text-emerald-500" />
+                <Activity className="size-5 text-orange-500" />
                 <h3 className="text-lg font-semibold tracking-tight">
                   Controls you hold yourself
                 </h3>
@@ -182,9 +182,9 @@ export function Security() {
           </Reveal>
 
           <Reveal delay={120}>
-            <Card className="flex h-full flex-col justify-between border-border/60 bg-gradient-to-br from-emerald-500/10 via-card to-sky-500/5 p-6 sm:p-8">
+            <Card className="flex h-full flex-col justify-between border-border/60 bg-gradient-to-br from-orange-500/10 via-card to-amber-500/5 p-6 sm:p-8">
               <div>
-                <ShieldCheck className="size-8 text-emerald-500" />
+                <ShieldCheck className="size-8 text-orange-500" />
                 <h3 className="mt-5 text-lg font-semibold tracking-tight">
                   Audited, certified, and independently tested
                 </h3>

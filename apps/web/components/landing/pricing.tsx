@@ -73,7 +73,7 @@ export function Pricing() {
         <SectionHeading
           eyebrow="Pricing"
           title="Pay per transaction. Nothing else."
-          description="No setup fees, no monthly minimums, no charge for failed attempts. Card rates start at 2.9% + KES 15 and fall with volume."
+          description="No setup fees, no monthly minimums, no charge for failed attempts. Card rates start at 2.9% + TZS 15 and fall with volume."
         />
 
         <div className="mt-14 grid items-start gap-6 lg:grid-cols-3">
@@ -83,12 +83,12 @@ export function Pricing() {
                 className={cn(
                   "relative h-full p-7 transition-all duration-300",
                   plan.featured
-                    ? "border-emerald-500/40 bg-gradient-to-b from-emerald-500/[0.07] to-card shadow-xl lg:-translate-y-3"
+                    ? "border-orange-500/40 bg-gradient-to-b from-orange-500/[0.07] to-card shadow-xl lg:-translate-y-3"
                     : "border-border/60 bg-card/70 hover:-translate-y-1 hover:shadow-lg",
                 )}
               >
                 {plan.featured ? (
-                  <Badge className="absolute -top-3 left-7 rounded-full bg-emerald-500 px-3 text-xs font-semibold text-white hover:bg-emerald-500">
+                  <Badge className="absolute -top-3 left-7 rounded-full bg-orange-500 px-3 text-xs font-semibold text-white hover:bg-orange-500">
                     Most popular
                   </Badge>
                 ) : null}
@@ -110,18 +110,18 @@ export function Pricing() {
                 </p>
 
                 <Button
-                  asChild
+                  render={<Link href={plan.href} />}
                   className="mt-6 w-full"
                   variant={plan.featured ? "default" : "outline"}
                   size="lg"
                 >
-                  <Link href={plan.href}>{plan.cta}</Link>
+                  {plan.cta}
                 </Button>
 
                 <ul className="mt-7 space-y-3 text-sm">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex gap-3">
-                      <Check className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                      <Check className="mt-0.5 size-4 shrink-0 text-orange-500" />
                       <span className="text-foreground/85">{feature}</span>
                     </li>
                   ))}

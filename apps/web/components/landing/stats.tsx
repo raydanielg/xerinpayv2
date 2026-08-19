@@ -12,7 +12,7 @@ type StatItem = {
 
 const STATS: StatItem[] = [
   { value: 4200, prefix: "", suffix: "+", label: "Businesses live on XerinPay" },
-  { value: 96, prefix: "KES ", suffix: "B", label: "Processed in the last year" },
+  { value: 96, prefix: "TZS ", suffix: "B", label: "Processed in the last year" },
   { value: 14, prefix: "", suffix: "", label: "Markets across the continent" },
   {
     value: 99.995,

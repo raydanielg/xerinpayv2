@@ -29,7 +29,7 @@ const SNIPPETS = {
   -H "Authorization: Bearer $XERINPAY_SECRET_KEY" \\
   -H "Idempotency-Key: 8f21c4ae-0b19" \\
   -d amount=4500 \\
-  -d currency=KES \\
+  -d currency=TZS \\
   -d method=mpesa \\
   -d "customer[phone]=+254712345678"`,
   node: `import XerinPay from "@xerinpay/node";
@@ -39,7 +39,7 @@ const xerin = new XerinPay(process.env.XERINPAY_SECRET_KEY);
 const charge = await xerin.charges.create(
   {
     amount: 4500,
-    currency: "KES",
+    currency: "TZS",
     method: "mpesa",
     customer: { phone: "+254712345678" },
   },
@@ -53,7 +53,7 @@ xerin = xerinpay.Client(api_key=os.environ["XERINPAY_SECRET_KEY"])
 
 charge = xerin.charges.create(
     amount=4500,
-    currency="KES",
+    currency="TZS",
     method="mpesa",
     customer={"phone": "+254712345678"},
     idempotency_key="8f21c4ae-0b19",
@@ -132,7 +132,7 @@ function CodeBlock({ code, lang }: { code: string; lang: Lang }) {
         className="absolute right-2 top-2 z-10 size-8 text-zinc-400 hover:bg-white/10 hover:text-white"
       >
         {copied ? (
-          <Check className="size-4 text-emerald-400" />
+          <Check className="size-4 text-orange-400" />
         ) : (
           <Copy className="size-4" />
         )}
@@ -165,7 +165,7 @@ export function Developers() {
               <Reveal key={item.title} delay={i * 100} from="left">
                 <div className="flex gap-4">
                   <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-border/70 bg-background">
-                    <item.icon className="size-5 text-emerald-500" />
+                    <item.icon className="size-5 text-orange-500" />
                   </span>
                   <div>
                     <h3 className="text-base font-semibold tracking-tight">
@@ -181,17 +181,13 @@ export function Developers() {
 
             <Reveal delay={320} from="left">
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-                <Button asChild className="group">
-                  <Link href="/auth/register">
-                    Get sandbox keys
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                  </Link>
+                <Button render={<Link href="/auth/register" />} className="group">
+                  Get sandbox keys
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </Button>
-                <Button asChild variant="outline">
-                  <a href="#faq">
-                    <BookOpen className="size-4" />
-                    API reference
-                  </a>
+                <Button render={<a href="#faq" />} variant="outline">
+                  <BookOpen className="size-4" />
+                  API reference
                 </Button>
               </div>
             </Reveal>

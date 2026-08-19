@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
+import { AtSign, GitFork, Globe, Mail, MapPin } from "lucide-react";
 
 import { Separator } from "@workspace/ui/components/separator";
 
@@ -49,9 +49,9 @@ const COLUMNS = [
 ];
 
 const SOCIALS = [
-  { icon: Twitter, label: "XerinPay on X", href: "#" },
-  { icon: Github, label: "XerinPay on GitHub", href: "#" },
-  { icon: Linkedin, label: "XerinPay on LinkedIn", href: "#" },
+  { icon: Globe, label: "XerinPay on X", href: "#" },
+  { icon: GitFork, label: "XerinPay on GitHub", href: "#" },
+  { icon: AtSign, label: "XerinPay on LinkedIn", href: "#" },
   { icon: Mail, label: "Email XerinPay", href: "mailto:hello@xerinpay.com" },
 ];
 

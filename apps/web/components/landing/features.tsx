@@ -21,13 +21,13 @@ const FEATURES = [
     title: "Every local payment method",
     body: "M-Pesa, Airtel Money, MTN MoMo, cards, and direct bank debits behind a single charge object. Add a market without touching your checkout.",
     span: "lg:col-span-2",
-    accent: "from-emerald-500/15",
+    accent: "from-orange-500/15",
   },
   {
     icon: Banknote,
     title: "Same-day settlement",
     body: "Funds land in your bank or wallet the same working day — with a full ledger you can reconcile line by line.",
-    accent: "from-sky-500/15",
+    accent: "from-amber-500/15",
   },
   {
     icon: Repeat,

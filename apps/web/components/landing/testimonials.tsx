@@ -64,7 +64,7 @@ export function Testimonials() {
                   </blockquote>
                 </div>
                 <figcaption className="mt-7 flex items-center gap-3 border-t border-border/60 pt-5">
-                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-sky-500 text-xs font-semibold text-white">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-xs font-semibold text-white">
                     {item.initials}
                   </span>
                   <span>

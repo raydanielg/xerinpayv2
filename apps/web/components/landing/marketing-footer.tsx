@@ -68,7 +68,7 @@ export function MarketingFooter() {
             </p>
             <p className="mt-5 flex items-center gap-2 text-xs text-muted-foreground">
               <MapPin className="size-3.5" />
-              Westlands, Nairobi · Kenya
+              Westlands, Dar es Salaam · Tanzania
             </p>
             <ul className="mt-5 flex gap-2">
               {SOCIALS.map((social) => (

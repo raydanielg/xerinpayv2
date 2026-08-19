@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: [
     "payment gateway",
     "M-Pesa API",
-    "payments Kenya",
+    "payments Tanzania",
     "payment infrastructure Africa",
     "PCI DSS",
     "payouts",

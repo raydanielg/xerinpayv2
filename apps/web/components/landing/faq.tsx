@@ -26,8 +26,8 @@ const FAQS = [
     a: "Mobile money collected before 16:00 EAT settles the same working day on Growth and Enterprise, next working day on Starter. Card settlement follows the acquirer cycle, typically T+2.",
   },
   {
-    q: "Can I use XerinPay from outside Kenya?",
-    a: "Yes. We are live in 14 markets and support 32 settlement currencies. Local acquiring is available in Kenya, Nigeria, Ghana, Tanzania, Uganda, Rwanda, and South Africa, with cross-border collections everywhere else.",
+    q: "Can I use XerinPay from outside Tanzania?",
+    a: "Yes. We are live in 14 markets and support 32 settlement currencies. Local acquiring is available in Tanzania, Kenya, Nigeria, Ghana, Uganda, Rwanda, and South Africa, with cross-border collections everywhere else.",
   },
   {
     q: "What are the fraud and chargeback protections?",
@@ -55,8 +55,7 @@ export function Faq() {
 
         <Reveal delay={80} className="mx-auto mt-12 max-w-3xl">
           <Accordion
-            type="single"
-            collapsible
+            multiple={false}
             className="w-full rounded-2xl border border-border/60 bg-card/50 px-5 sm:px-7"
           >
             {FAQS.map((item) => (

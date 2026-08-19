@@ -72,7 +72,7 @@ const CERTS = [
   "SOC 2 Type II",
   "ISO 27001",
   "GDPR",
-  "Kenya DPA 2019",
+  "Tanzania PDPA 2022",
   "PSD2 / SCA",
 ];
 
